@@ -31,22 +31,21 @@
         function moveOne(my, opt) {
             var top = my.position().top;
             var height = boxHeight + 10;
-            height = opt.position === 'topright' ? height : -height
+            height = opt.position === 'topright' ? height : -height;
             my.stop(true).animate({
                 top: top + height
             }, 200);
         }
-    }
+    };
 
-
+    //追到到body
     Message.prototype.appendBox = function (opt) {
         var box = $(this.creatBox(opt)).appendTo('body');
         if (opt.position === 'lowerleft') {
             box.css('top', $(window).height() - box.outerHeight() - 20);
-        };
+        }
         return box;
     };
-
 
     //返回Html字符串
     Message.prototype.creatBox = function (opt) {
@@ -57,14 +56,13 @@
         return uw.template(tpl, opt);
     };
 
-
-
+    //绑定关闭
     Message.prototype.bindClose = function (box, opt) {
         var that = this;
         setTimeout(function () {
             that.close(box, opt);
         }, 3000);
-    }
+    };
 
     //绑定关闭事件
     Message.prototype.close = function (box, opt) {
