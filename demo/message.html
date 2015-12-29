@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="../css/animate.css" rel="stylesheet">
+<link href="../css/unwisdom.message.css" rel="stylesheet">
+<script type="text/javascript" src="../lib/jquery.js"></script>
+<script type="text/javascript" src="../src/unwisdom.js"></script>
+<script type="text/javascript" src="../src/unwisdom.helper.js"></script>
+<script type="text/javascript" src="../src/unwisdom.message.js"></script>
+</head>
+<body>
+    
+    <div style="padding: 150px; text-align: center;">
+
+        <a href="javascript:;" data-position="topright">右上</a>
+
+        <a href="javascript:;" data-position="lowerleft">左下</a>
+
+        <a href="javascript:;" data-position="lowerright">右下</a>
+    </div>
+
+    <script type="text/javascript">
+
+    var mappings = {
+        topright : {
+            inClass : 'flipInX',
+            outClass: 'flipOutX'
+        },
+        lowerleft : {
+            inClass : 'fadeInUp',
+            outClass: 'fadeOutLeft'
+        },
+        lowerright : {
+            inClass : 'tada',
+            outClass: 'zoomOut'
+        }
+    }
+
+
+        $(document).on('click', 'a', function () {
+            var my = $(this);
+            var position = my.data('position');
+            var color = ['green', 'blue', 'red', 'yellow', 'black'][Math.floor(Math.random() * 5)];
+<<<<<<< HEAD
+            var content = 'You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!'.substring(0, 50)
+            
+=======
+
+            var content = 'You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!'.substring(0, Math.floor(Math.random() * 300))
+>>>>>>> origin/master
+            uw.message({
+                title: 'Title',
+                content: content,
+                inClass: mappings[position].inClass,
+                outClass: mappings[position].outClass,
+                position: position, // topright|lowerleft|lowerright
+                color: color, // green|blue|red|yellow|black
+            });
+        });
+
+
+    </script>
+</body>
+</html>
