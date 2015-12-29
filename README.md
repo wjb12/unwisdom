@@ -29,7 +29,7 @@ unwisdom适合开发管理后台类的页面，前端同学只要学会配路由
 # 模块
 <table>
     <tr>
-        <td>[消息模块](doc/unwisdom.message.md)</td>
+        <td><a href="doc/unwisdom.message.md">消息模块</a></td>
         <td>提供消息的界面</td>
     </tr>
 </table>
