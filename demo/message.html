@@ -15,11 +15,8 @@
 <body>
     
     <div style="padding: 150px; text-align: center;">
-
         <a href="javascript:;" data-position="topright">右上</a>
-
         <a href="javascript:;" data-position="lowerleft">左下</a>
-
         <a href="javascript:;" data-position="lowerright">右下</a>
     </div>
 
@@ -38,25 +35,25 @@
             inClass : 'tada',
             outClass: 'zoomOut'
         }
-    }
+    };
 
 
-        $(document).on('click', 'a', function () {
-            var my = $(this);
-            var position = my.data('position');
-            var color = ['green', 'blue', 'red', 'yellow', 'black'][Math.floor(Math.random() * 5)];
-            var content = 'You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!'.substring(0, 50)
-            
+    $(document).on('click', 'a', function () {
+        var my = $(this);
+        var position = my.data('position');
+        var color = ['green', 'blue', 'red', 'yellow', 'black'][Math.floor(Math.random() * 5)];
+        var content = 'You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!You have many options to position and animate your jBoxes!'.substring(0, 50)
+        
 
-            uw.message({
-                title: 'Title',
-                content: content,
-                inClass: mappings[position].inClass,
-                outClass: mappings[position].outClass,
-                position: position, // topright|lowerleft|lowerright
-                color: color, // green|blue|red|yellow|black
-            });
+        uw.message({
+            title: 'Title',
+            content: content,
+            inClass: mappings[position].inClass,
+            outClass: mappings[position].outClass,
+            position: position, // topright|lowerleft|lowerright
+            color: color, // green|blue|red|yellow|black
         });
+    });
 
 
     </script>

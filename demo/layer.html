@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="../css/animate.css" rel="stylesheet">
+<link href="../css/unwisdom.layer.css" rel="stylesheet">
+<script type="text/javascript" src="../lib/jquery.js"></script>
+<script type="text/javascript" src="../src/unwisdom.js"></script>
+<script type="text/javascript" src="../src/unwisdom.helper.js"></script>
+<script type="text/javascript" src="../src/unwisdom.layer.js"></script>
+</head>
+<body>
+    
+    <div style="padding: 150px; text-align: center;">
+        <a href="javascript:;" id="tip">tip</a>
+        <a href="javascript:;" id="alert">alert</a>
+        <a href="javascript:;" id="confirm">confirm</a>
+        <a href="javascript:;" id="box">box</a>
+        <a href="javascript:;" id="form">form</a>
+        <a href="javascript:;" id="iframe">iframe</a>
+    </div>
+
+    <script type="text/javascript">
+    $('#tip').on('click', function(){
+        uw.tip('提示中提示中提示中提示中提示中提示中提示中提示中提示中提示中!');
+    });
+
+    $('#alert').on('click', function(){
+        uw.alert('msg');
+    });
+
+    $('#confirm').on('click', function(){
+        uw.confirm('msg', function(){
+
+        });
+    });
+
+    $('#box').on('click', function(){
+        uw.box({
+            title: '',
+            content: '<div></div>',
+            width: 600,
+            height: 400
+        });
+    });
+
+    $('#form').on('click', function(){
+        uw.form({
+            title: '',
+            width: 600,
+            height: 400,
+            action: 'abc.php',
+            content: '<div><input type="text" name="abc" /></div>',
+            beforeSubmit: function () {
+
+            },
+            submit: function () {
+
+            }
+        });
+    });
+
+    $('#iframe').on('click', function(){
+        uw.iframe({
+            title: '',
+            width: 600,
+            height: 400,
+            url: 'http://www.baidu.com'
+        });
+    });
+    </script>
+</body>
+</html>
