@@ -10,31 +10,6 @@
     border-radius: 5px;
 }
 
-.uw-message-box{
-    padding: 20px;
-    border-radius: 5px;
-    -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-delay: .2s;
-    -webkit-animation-timing-function: ease;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-duration: 1s;
-    -moz-animation-delay: .2s;
-    -moz-animation-timing-function: ease;
-    -moz-animation-fill-mode: both;
-    -ms-animation-duration: 1s;
-    -ms-animation-delay: .2s;
-    -ms-animation-timing-function: ease;
-    -ms-animation-fill-mode: both;
-    animation-duration: 1s;
-    animation-delay: .2s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-}
-
 .uw-message-h2 {
     font-size: 16px;
     height: 30px;
@@ -79,16 +54,12 @@
 /* 左下*/
 .uw-message-lowerleft {
     left: 20px;
-<<<<<<< HEAD
 }
 
 .uw-message-lowerleft .uw-message-black {
-=======
     bottom: 0;
-    animation: upY 0.5s .3s ease both;
 }
 .uw-message-lowerleft.uw-message-black {
->>>>>>> origin/master
     background: #333 url(images/black.png) repeat-y;
 }
 .uw-message-lowerleft .uw-message-red {
@@ -104,32 +75,7 @@
 .uw-message-lowerleft .uw-message-green {
     background: #333 url(images/green.png) repeat-y;
 }
-<<<<<<< HEAD
-=======
-.uw-message-lowerleft-out {
-    animation: upYhide 0.5s 0.6s ease both;
-}
-@keyframes upYhide {
-    0% {
-        transform: translateY(-40px) translateX(0);
-        opacity: 1
-    }
-    100% {
-        transform: translateY(-40px) translateX(-300px);
-        opacity: 0
-    }
-}
-@keyframes upY {
-    0% {
-        transform: translateY(0);
-        opacity: 0
-    }
-    100% {
-        transform: translateY(-40px);
-        opacity: 1
-    }
-}
->>>>>>> origin/master
+
 
 /* 右下 */
 .uw-message-lowerright {

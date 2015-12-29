@@ -1,5 +1,5 @@
 (function () {
-<<<<<<< HEAD
+
     var settings = {
         inClass: 'bounce',
         outClass: 'bounceOut',
@@ -35,58 +35,9 @@
             my.stop(true).animate({
                 top: top + height
             }, 200);
-=======
-
-    //消息的情况
-    var remove = {
-        lowerright: function (obj) {
-            obj.find('.uw-message-box').addClass('tada');
-            setTimeout(function () {
-                obj.remove();
-            }, 299);
-        },
-        lowerleft: function (obj) {
-            obj.addClass('uw-message-lowerleft-out');
-            setTimeout(function () {
-                obj.remove();
-            }, 2000);
-        },
-        topright: function (obj) {
-            obj.find('.uw-message-box').addClass('flipOutX');
-            setTimeout(function () {
-                obj.remove();
-            }, 2000);
         }
-    };
+    }
 
-    var move = {
-        topright: function (height, oldEls, template) {
-            template.find('.uw-message-box').addClass('flipInX');
-            oldEls.each(function () {
-                var my = $(this);
-                var top = my.position().top;
-                top += height + 10;
-                my.stop(true).animate({
-                    top: top
-                }, 300);
-            });
-
-        },
-        lowerleft: function (height, oldEls) {
-            oldEls.each(function () {
-                var my = $(this);
-                var bottom = my.css('bottom').replace(/\D+/, '');
-                bottom = bottom - -10 + height;
-                my.stop(true).animate({
-                    bottom: bottom
-                }, 170);
-            });
-        },
-        lowerright: function (height, oldEls) {
-            remove.lowerright(oldEls);
->>>>>>> origin/master
-        }
-    };
 
     Message.prototype.appendBox = function (opt) {
         var box = $(this.creatBox(opt)).appendTo('body');
@@ -96,7 +47,7 @@
         return box;
     };
 
-<<<<<<< HEAD
+
     //返回Html字符串
     Message.prototype.creatBox = function (opt) {
         var tpl = '<div class="uw-message uw-message-#{position}"><div class="animated uw-message-box uw-message-#{color} #{inClass}">';
@@ -105,38 +56,8 @@
         tpl += '<div></div>';
         return uw.template(tpl, opt);
     };
-=======
-    function creat(opt) {
-        var oldEls = $('.uw-message-' + opt.position);
-        var timer = timerFun();
-        var template = ['<div class="uw-message"><div class="uw-message-box">'];
-        opt.title && template.push('<div class="uw-message-h2">' + opt.title + '</div>');
-        opt.content && template.push('<div class="uw-message-nav">' + opt.content + '</div>');
-        template.push('</div></div>');
-        template = $(template.join(''));
-
-        template
-            .addClass('uw-message-' + opt.position)
-            .find('.uw-message-box')
-            .addClass('uw-message-' + opt.color)
-            .end()
-            .appendTo('body')
-            .hover(function () {
-                clearTimeout(timer);
-            }, function () {
-                timer = timerFun();
-            });
 
 
-        var height = template.outerHeight();
-        move[opt.position](height, oldEls, template); //先把之前的移动一下
-
-        function timerFun() {
-            return setTimeout(function () {
-                remove[opt.position](template);
-            }, 3000);
-        }
->>>>>>> origin/master
 
     Message.prototype.bindClose = function (box, opt) {
         var that = this;

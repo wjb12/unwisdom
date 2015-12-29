@@ -1,0 +1,21 @@
+{
+    "name": "unwisdom",
+    "version": "1.0.0",
+    "description": "unwisdom for javascript",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kyo4311/unwisdom.git"
+    },
+    "author": "guosheng",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kyo4311/unwisdom/issues"
+    },
+    "homepage": "https://github.com/kyo4311/unwisdom",
+    "dependencies": {
+        "gulp": "^3.9.0",
+        "gulp-jshint": "^2.0.0"
+    },
+    "private": true
+}
